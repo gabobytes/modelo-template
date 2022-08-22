@@ -18,8 +18,16 @@ export class CategoryComponent implements OnInit {
   ]
   constructor(public service:ServiceMainService) { }
 
+  loadedContent = false;
+
   ngOnInit(): void {
-    this.service.getProducts().subscribe(res => this.bodyArray=res["body"])
+    this.service.getProducts().subscribe(
+      res => {this.bodyArray=res["body"]},
+      error => {this.loadedContent = false},
+      () => {
+        this.loadedContent = true;
+      }
+      )
   }
 
   addItem(item){

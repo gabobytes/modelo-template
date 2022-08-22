@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard.component';
 import { CarProductsComponent } from '../car-products/car-products.component';
 import { CategoryComponent } from '../category/category.component';
 import { HomeComponent } from '../home/home.component';
+import { LoadComponent } from '../load/load.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { HomeComponent } from '../home/home.component';
     DashboardComponent,
     HomeComponent,
     CategoryComponent,
-    CarProductsComponent
+    CarProductsComponent,
+    LoadComponent
   ],
   imports: [
     CommonModule,
